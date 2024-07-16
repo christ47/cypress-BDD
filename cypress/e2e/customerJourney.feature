@@ -1,0 +1,12 @@
+
+Feature: A Customer Journey
+    Scenario: A customer should be able to order an item
+        Given I login as a standard user
+        When I add a backpack
+        When I add a bike light 
+        When I view my shopping cart
+        When I click checkout
+        When I add my checkout information
+        When I enter my checkout information
+        When I finish my order
+        Then I see confirmation of my order
