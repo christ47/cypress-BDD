@@ -5,21 +5,11 @@ This framework consist of critical paths for the swag labs app. It consists of T
 ## Usage
 
 Run $ npm
-To run test run $npx cypress open
+To run test run $npx cypress run
+
+## Limitations
+Unfortunately, as saucedemo has issues working with cypress it is best to run this test headless. Code around web securities has been added to my cypress config in order to work around this issue. For more information on this visit the link below!
+https://github.com/cypress-io/cypress/issues/21213
 
 
-Typescript, Cypress, Cucumber
-        Logout
-        Remove Items from basket 1
-        Remove item from basket 2
-        Filter lowest to highest
-        filter highest to lowest
-        filter letters
-        Can access external site?
 
-
-        Negative paths
-
-        Locked user
-        Error User
-        
