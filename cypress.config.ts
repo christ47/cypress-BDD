@@ -49,7 +49,10 @@ export default defineConfig({
   e2e: {
     specPattern: "**/*.feature",
     supportFile: false,
+    chromeWebSecurity: false, // handles saucedemo bug
     setupNodeEvents,
-    baseUrl: 'https://www.saucedemo.com/'
+    baseUrl: 'https://www.saucedemo.com/',
+    pageLoadTimeout: 10000,
+    defaultCommandTimeout: 10000
   },
 });

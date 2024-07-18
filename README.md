@@ -16,3 +16,10 @@ Typescript, Cypress, Cucumber
         filter highest to lowest
         filter letters
         Can access external site?
+
+
+        Negative paths
+
+        Locked user
+        Error User
+        

@@ -1,14 +1,19 @@
 import '@testing-library/cypress/add-commands'
 // <reference types="@testing-library/cypress" />
 
-Cypress.Commands.add('assertOrderConfirmation', ()=>{
+const assertOrderConfirmation = ()=>{
     cy.findByText(/Thank you for your order!/).should('be.visible')
     cy.findByText(/Your order has been dispatched, and will arrive just as fast as the pony can get there!/).should('be.visible')
-})
+}
 
+Cypress.Commands.add('assertOrderConfirmation', assertOrderConfirmation)
 
-// declare namespace Cypress{
-//     interface Chainable{
-//         assertOrderConfirmation():Chainable<void>
-//     }
-// }
+declare global {
+    namespace Cypress {
+        interface Chainable {
+        assertOrderConfirmation(): void;
+    }
+  }
+}
+
+export {};
