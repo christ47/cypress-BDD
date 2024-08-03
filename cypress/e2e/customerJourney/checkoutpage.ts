@@ -14,8 +14,6 @@ When(/^I add my checkout information$/, () => {
         cy.get('#last-name').type(user.lastName)
         cy.get('#postal-code').type(user.postCode)
     })
-    cy.screenshot()
-
 });
 
 When(/^I enter my checkout information$/, () => {
