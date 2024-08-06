@@ -23,7 +23,7 @@ Feature: A Customer Journey
         When I add a backpack
         When I remove all item
         Then I see an empty basket
-
+        Then I Generate a report
 
 
 
