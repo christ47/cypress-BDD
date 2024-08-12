@@ -6,6 +6,7 @@ async function setupNodeEvents(
   on: Cypress.PluginEvents,
   config: Cypress.PluginConfigOptions
 ): Promise<Cypress.PluginConfigOptions> {
+  await addCucumberPreprocessorPlugin(on, config)
   on(
     "file:preprocessor",
     webpack({
@@ -46,11 +47,11 @@ async function setupNodeEvents(
 export default defineConfig({
   e2e: {
     specPattern: "**/*.feature",
-    supportFile: false,
+    supportFile: 'cypress/support/index.ts',
     chromeWebSecurity: false, // handles saucedemo bug
     setupNodeEvents,
     baseUrl: 'https://www.saucedemo.com/',
-    pageLoadTimeout: 10000,
+    pageLoadTimeout: 15000,
     defaultCommandTimeout: 10000
   },
 });
