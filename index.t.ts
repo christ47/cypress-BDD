@@ -4,6 +4,8 @@ var options = {
         theme: 'bootstrap',
         jsonFile: 'cucumber-report.json',
         output: 'report/cucumber_report.html',
+        screenshotsDirectory: 'screenshots/',
+        storeScreenshots: true,
         reportSuiteAsScenarios: true,
         scenarioTimestamp: true,
         launchReport: true,
